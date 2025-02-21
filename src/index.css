@@ -1,0 +1,1128 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background: #f1f3f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  color: #01450b;
+}
+
+.maincard {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.button-container {
+  display: flex; 
+}
+
+img{
+  max-width: 100%;
+  max-height:100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.main{
+  display:grid;
+  grid-template-areas:
+  "cats cats" 
+  "cards cards"
+  "pagination pagination"
+  "footer footer";
+grid-template-rows: 1fr auto; 
+grid-template-columns: 1fr 3fr; 
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  transition: 0.3s;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 99%;
+  /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,  */
+              /* rgba(14, 30, 37, 0.32) 0px -1px 5px 1px; */
+  background-color: #fff;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  overflow: auto;
+  flex-wrap: wrap;
+  grid-area: cards;
+}
+
+.card> a img {
+  max-width: 200px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+p.desclimit {
+  line-height: 1em!important;
+  font-weight: 300;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.card h2{
+  margin: 0;
+  padding: 0;
+}
+
+p.totallisted {
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding: 0;
+  margin: 5px;
+}
+
+.features {
+  display: flex;
+  column-gap: 10px;
+  margin: 0!important;
+  padding: 0;
+  flex-wrap:wrap;
+}
+
+.features > * {
+  border: 1px solid #333;
+  padding: 7px;
+  border-radius: 5px;
+  margin: 10px 0 0 0!important;
+}
+
+.features a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  font-size: 1em;
+   
+}
+
+.features  a:hover {
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} 
+
+.container {
+  padding: 2px 16px;
+} 
+
+.maincard{
+  display:flex;
+  flex-wrap:wrap;
+  padding: 5px;
+} 
+
+.mainheader{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:  #777;
+  font-size:3em;
+}
+.inputclass {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+  max-width: 90%;
+  width: 1000px;
+}
+a.searchlink >svg {
+  font-size: 2em;
+  color: #00460b;
+}
+
+.formsearch {
+  display: block;
+  font-size: 1em;
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  border: 2px solid rgb(204, 204, 204);
+}
+
+.container h4, .container p {
+  line-height: 0.6em;
+  margin-bottom: 10px;
+} 
+
+a.readmore {
+  text-decoration: underline;
+  color: #444444;
+  font-weight: 800;
+}
+
+a.cardlink {
+  text-decoration: none;
+  color: #01450d;
+  font-weight: 400;
+  font-size: 1.1em;
+  word-break: break-word;
+  max-width: 160px;
+}
+
+.headlist {
+  text-align: center;
+  font-weight: 500;
+  background: -webkit-radial-gradient(#3baf0a,#368605);
+  background: radial-gradient(#3baf0a,#368605);
+  box-sizing: border-box;
+  color: #fff;
+  padding-top: 6px;
+  font-size: 3em;
+  line-height: 1.2em;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form#cats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10px;
+  margin: 10px auto;
+  padding: 10px;
+  grid-area: cats;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+form#cats div div select, form#cats div h2 {
+    color: #555;
+    font-weight: 800;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    border: 0 none;
+    /* width: 200px; */
+    margin-top: 3px;
+    background-color: #f0f0f0;
+}
+#cats div {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  border-radius:5px;
+}
+
+#cats div div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 0 none;
+  padding: 0;
+}
+
+form#cats div h2 {
+  font-size: 1em;
+  text-align: center;
+  border: 0 none!important;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+form#cats div h2:first-child, #cats div:first-child {
+  margin-top: 0;
+  background-color: #fff;
+}
+
+.cat {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding: 5px;
+  color: #fff;
+  background: rgb(89 143 89 / 53%);
+  border-radius: 10px 0 0 0;
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-style: italic;
+}
+
+form#cats div div select:hover
+{
+  background: #03440d;
+  color: #fff!important;
+  cursor: pointer;
+}
+
+:hover{
+  cursor: pointer;
+}
+
+.card span.mapspan {
+    display: inline-block;
+    font-weight: 300!important;
+    font-size: 1em!important;
+    padding: 3px!important;
+    line-height:1em;
+    text-align: left!important;
+}
+
+.footer {
+  grid-area: footer;
+  border: 0 none;
+  border-top: 1px solid #ccc;
+  max-width: 1200px;
+  text-align: center;
+  display: inline;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  text-align: center;
+  font-style: italic;
+}
+
+.herolinks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.herolinks a {
+  color: #00460d;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #00460d;
+  padding: 5px;
+  border-radius: 5px;
+}
+.herolinks a:hover {
+  background-color: #00460d;
+  color: #fff;
+}
+
+.pagination {
+  grid-area: pagination;
+  box-shadow: rgba(60, 64, 67, 0.15) 11px 0px 34px 0px;
+  border: 0 none;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.cards span, .pagination span {
+  font-weight: 400;
+  font-size: 1.25em;
+  padding:3px;
+  border-radius: 5px;
+}
+.totallisted p{
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.totallisted p, .pagination p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+
+.pagination ul {
+  justify-content: center;
+  list-style: none;
+  margin: 3px 0;
+  padding: 5px;
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.pagination li {
+  margin: 10px 5px;
+  border: 1px solid #333;
+  padding: 5px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.navlinks{
+  text-decoration: none;
+  color: #555;
+  font-weight: 800;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.navlinks a{
+  text-decoration: none;
+  color: #555;
+  font-weight: 800;
+  font-size: 1.2em;
+  gap:10px;
+}
+
+.navbar, .nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #44794f;
+  color: #fff;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  text-decoration: none;
+  gap: 20px;
+}
+.nav-bar {
+  padding: 14px;
+  z-index: 2;
+  top: 80px;
+  border-top: 3px solid #39a40a;
+  border-bottom: 3px solid #39a40a;
+  background-color: #fff;
+}
+
+.nav-bar a {
+  font-size: 0.9em;
+  margin: 0!important;
+  padding-left: 22px;
+} 
+
+.navbar {
+  justify-content: space-around;
+  background-color: #fff;
+}
+
+.navbar div img {
+  height: 60px;
+  object-fit: contain;
+}
+
+.navbar a, .nav-bar a{
+  text-decoration: none;
+  color: #00460d;
+  font-weight: 800;
+  font-size: 1em;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.navbar> .active{
+  background-color: #e3ebe5;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.mainnav {
+  display: flex;
+  column-gap: 15px;
+}
+
+.mainnav a.active {
+  padding: 0px 10px;
+  border-radius: 10px;
+  color: #87b222;
+  font-weight: 700;
+}
+
+.mainnav a {
+  font-weight: 500;
+}
+
+.weeddesc {
+  display: grid;
+  width: 1200px;
+  max-width: 100%;
+  margin: 20px auto;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 15px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+  border-radius: 10px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+      "images moreonweed moreonweed"
+      "images weeddetail weeddetail"
+      "images weeddesk weeddesk"
+      "images weedinfo weedinfo"
+      "footer footer footer";
+  padding: 20px;
+}
+
+.aboutdetails, .listdisplays, .weeddesc{
+  background-color: #fff;
+}
+
+.wonscontainerheader{
+  grid-template-columns: 1fr!important;
+  padding:10px;
+}
+
+.wonscontainerheader .para {
+  margin: 10px 20px 30px 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.wonscontainerheader h1 {
+  text-align: center;
+  color: #447950;
+  font-size: 2em;
+}
+.wonscontainer h4 {
+  text-align: left;
+  margin: 10px 0 10px 0;
+} 
+
+ .wonscontainer h4 a {
+  color: #333;
+}
+
+.aboutdetails , .wonscontainerheader{
+  display: grid;
+  max-width: 1200px;
+  /* max-width: 100%; */
+  margin: 20px auto;
+  justify-content: center;
+  align-items: start;
+  box-shadow: 0px 1px 15px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+  border-radius: 10px;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.listdisplays22{
+  box-shadow: 0px 1px 15px 0 rgba(0,0,0,0.5);
+  margin: 20px auto; 
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+.listdisplays22 div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: 0.3s;
+  padding: 10px;
+  flex: 1 0 calc(100% / 4); 
+  border: 1px solid #b4afaf;
+
+}
+
+.listdisplays22 div h2 {
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+.listdisplays22 div div {
+  border: 0 none;
+}
+
+.aboutdetails{
+  grid-template-columns: 1fr;
+}
+
+img.imgplanting {
+  width: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.listcol {
+  /* display: flex; */
+  /* justify-content: flex-start; */
+  column-gap: 10px;
+  /* align-items: flex-start; */
+  /* margin-bottom: 10px; */
+  margin-left: 5px;
+}
+
+
+.listdisplays22 img.imgplanting {
+  width: 30px;
+  max-width: 30px;
+}
+
+.moreooweed{
+  grid-area: moreonweed;
+  display: inline;
+}
+.image-container{
+  grid-area: images;
+}
+.weeddetail{
+  grid-area: weeddetail;
+}
+.weeddesk{
+  grid-area: weeddesk;
+}
+.weedinfo{
+  grid-area: weedinfo;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width:450px; */
+}
+
+img.weedimg {
+  border-radius: 15px;
+}
+
+.small-weedimg {
+  flex: 1;
+  max-width: 100%;
+  object-fit: cover; 
+  height:70px;
+  width:auto;
+  margin: 10px 5px;
+  border-radius: 5px;
+}
+
+.small-images {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 450px;
+}
+
+.moreonweed h2, .moreonweed h3, .moreonweed h4 {
+  margin: 5px 0;
+}
+
+.moreonweed h2 {
+  font-size: 3em;
+  color: #555;
+}
+
+.moreonweed h3 {
+  font-size: 1.6em;
+  font-style: italic;
+  color: #666;
+}
+
+.moreonweed h4.family {
+  border-bottom: 1px solid #ccc;
+  padding-bottom:20px;
+  text-align: left;
+}
+
+.weeddetail div ul, div h4 {
+  margin: 10px 0 0 0; 
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  color:#666;
+}
+
+.weeddetail {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  text-align: center;
+  border-bottom:1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-top:10px
+}
+
+.weeddetail h4 {
+  padding: 10px;
+  font-weight: 800;
+  font-size: 0.9em;
+
+}
+
+.weeddetail span, .weeddetail ul {
+  display: block;
+  margin-top:10px;
+  font-weight: 600;
+}
+
+.weeddesk p {
+  font-size: 1em;
+  text-align: justify;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  color: #666;
+  letter-spacing: -0.003em;
+  margin-right: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+
+.weeddesk p span {
+  display: block!important;
+  margin-top: 7px;
+}
+
+
+.weedinfo h4 {
+  font-size: 1.2em;
+  color: #666; 
+  text-align: left;
+}
+
+.weedinfo li {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  font-size: 0.85em;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+.weedinfo li a,.weeddetail a {
+  color: #333;
+}
+
+.hero h3 {
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+hero h1, .hero h3 {
+  margin: 0;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clickthumb{
+  text-align: center;
+  margin: 3px;
+  cursor: pointer;
+  font-style: italic;
+  font-size:0.9em
+}
+
+p.backbutton:hover {
+  color: #444;
+  background: #fff;
+}
+p.backbutton {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #444;
+  color: #fff;
+  font-size: medium;
+}
+
+p.backbutton1 {
+  padding: 0 2em;
+  margin: 0;
+  text-decoration: none;
+  color: #975b5b;
+
+}
+
+.backbutton1 a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.7em;
+
+}
+
+.listp{
+  padding:0;
+  margin:0;
+}
+
+p.backbutton a {
+  color: #ffff;
+  text-decoration: none;
+  padding: 2em;
+}
+
+.aboutdetails p {
+  font-size: 1.1em;
+}
+.aboutdetails h1 {
+  font-size: 2.5em;
+  font-weight: 400;
+  font-kerning: none;
+}
+.aboutdetails {
+  text-align: center;
+  max-width: 700px;
+}
+
+.listdisplays h2 {
+  position: relative;
+}
+
+.listdisplays #A h2::before, 
+.listdisplays #B h2::before,
+.listdisplays #C h2::before,
+.listdisplays #D h2::before {
+  height: 0;
+}
+
+.listdisplays h2::before {
+  content: "";
+  display: block;
+  height: 85px; 
+  margin-top: 20px; 
+  visibility: hidden;
+}
+
+
+.wonscontainer1, .wonscontainer2, .wonscontainer3 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr) );
+}
+
+h4.cardlink {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+h4.cardlink a, .cardlink span {
+    font-size: 1.1em;
+    display: block;
+    color:#333;
+    text-decoration: none;
+}
+.cardlink span {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.9em!important;
+    text-align: left;
+    word-break: break-word!important;
+}
+
+h4.cardlink {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 0;
+}
+
+.hamburger {
+  display: none;
+}
+
+select {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-size: 18px;
+  color: #0b1016;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Mobile layout */
+@media only screen and  (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 3;
+    box-shadow: 0 -5px 18px 0 rgba(0,0,0,0.2);
+  }
+
+  .navbar.open {
+    transform: translateX(-100%);
+  }
+
+  .nav-bar {
+    position: fixed;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    display: flex; 
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 10;
+  }
+
+  button.hamburger {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .burger-icon {
+      width: 2rem;
+      height: 3rem;
+  }
+
+  p.backbutton{
+    text-align: center;
+  }
+
+    .mainnav {
+      display: flex;
+      row-gap: 15px;
+      flex-direction: column;
+      text-align: end;
+  }
+
+  .mainnav a {
+    font-size: 1.3em;
+  }
+
+  .cards{
+    padding: 10px;
+  }
+
+  .card{
+    flex-direction: column;
+    width: 100%;
+  }
+  .card>a img {
+    max-width: 100%;
+    height: 100px;
+    border-radius:10px;
+    margin: 10px auto;
+  }
+
+  .container {
+    text-align: center;
+  }
+  .features {
+    justify-content: center;
+  }
+
+  p.totallisted {
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .backarrow {
+    left: 0;
+  }
+
+  .forwardarrow {
+    right: 0; 
+  }
+  .backarrow, .forwardarrow {
+    font-weight: 600;
+    color: green;
+    font-size: 2em;
+    position: fixed;
+    z-index: 1000;
+    top: 133px;
+  }
+
+  .alphabet-list a {
+    padding-left: 22px;
+  }
+}
+
+/* //media queries 850px */
+
+@media only screen and (max-width: 850px) {
+  #cats div {
+    flex-direction: column;
+    margin: 0 5px;
+  }
+
+  .hero{
+    margin: 0 20px;
+    text-align:center;
+  }
+
+  .main{
+    grid-template-areas:
+        "cats"
+        "cards"
+        "pagination"
+        "footer";
+    /* grid-template-rows: 1fr; */
+    grid-template-columns: 1fr;
+  }
+
+  form#cats{
+    margin: 10px;
+  }
+
+  form#cats div div {
+    text-align: center;
+    margin: 10px auto;
+    display: inline-block;
+  }
+  
+  a.listlink.active {
+    background: #f2f2f2;
+    color: #000;
+    cursor: pointer;
+    font-style: italic;
+  }
+  .listdisplays {
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start!important;
+    flex-wrap: wrap;
+  }
+
+  .wonscontainer1,.wonscontainer2 ,.wonscontainer3{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr) );
+  }
+
+  .listdisplays #C h2::before,
+  .listdisplays #D h2::before {
+    height: 85px;
+  }
+
+}
+/* //media queries 1000px */
+
+@media only screen and (max-width: 1000px) {
+  .image-container {
+    max-width: 450px;
+    justify-content: center;
+    margin: 10px auto;
+  } 
+    .weeddesc {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      grid-template-areas:
+          "moreonweed"
+          "images"
+          "weeddetail"
+          "weeddesk"
+          "weedinfo";
+          width:auto;
+          margin: 20px;
+  }
+  .moreonweed, .moreonweed h4.family {
+    text-align: center;
+  }
+
+  .weeddetail span, .weeddetail ul {
+    margin-top: 0;
+  }
+  .weeddetail {
+    padding-bottom: 10px;
+    display: block;
+  }
+  .weeddetail h4 {
+    border: 0 none;
+    padding: 0;
+  }
+  .weeddetail div ul{
+    margin: 0;
+  }
+
+  .listdisplays {
+    width: auto;
+    margin: 20px 10px;
+  }
+
+  .backarrow, .forwardarrow {
+    top: 92px;
+}
+
+  .nav-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    position: sticky;
+  }
+  
+  .nav-bar::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .nav-bar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .nav-bar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.aboutdetails, .wonscontainerheader {
+    margin:20px;
+    width:auto;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  form#cats div div select, form#cats div h2 {
+    width:300px;
+  }
+  .wonscontainer1, .wonscontainer2, .wonscontainer3{
+    grid-template-columns: 1fr;
+  }
+}
