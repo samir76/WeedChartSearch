@@ -1,5 +1,5 @@
-import React from 'react'
-import { wons, data2 } from '../database/Data'
+import React from 'react';
+import { wons, data2 } from '../database/Data';
 import { Link, NavLink } from 'react-router-dom';
 import Footer from './Footer';
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -17,7 +17,7 @@ export default function Wons() {
                         <p>The WoNS listed below are individual species or genera. Please note that some of these species or genera are grouped together as one of the 32 WoNS (e.g. Asparagus weeds, Brooms, Opuntioid cacti, and Bitou bush / Boneseed).</p>
                         <p>Under the National Weeds Strategy, 20 introduced plants were identified as Weeds of National Significance (WoNS).</p>
                         <p>These weeds are regarded as the worst weeds in Australia because of their invasiveness, potential for spread, and economic and environmental impacts.</p>
-                        <h4>More information: <Link to="www.weeds.gov.au">Weeds of National Significance</Link></h4>
+                        <h4>More information: <Link to="https://weeds.org.au">Weeds of National Significance</Link></h4>
                     </div>
 
                     <div className="wonscontainer1">

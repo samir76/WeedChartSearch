@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { IoIosRefreshCircle } from "react-icons/io";
+import { FaSearch } from "react-icons/fa";
 
 
 export default function Search({ Searchchange, categories={} }) {
@@ -16,12 +17,12 @@ export default function Search({ Searchchange, categories={} }) {
   };
 
   return (
-    <div class="inputclass">
+    <div className="inputclass">
       <input
         onChange={handleSearchChange}
         className="formsearch" type="text" placeholder="Search by Weed name, type or class ... ">
       </input>
-      <NavLink className="searchlink" to="/"><IoIosRefreshCircle/></NavLink>
+      <NavLink className="searchlink" to="/"><FaSearch/></NavLink>
     </div>
   )
 }

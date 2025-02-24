@@ -62,7 +62,7 @@ grid-template-columns: 1fr 3fr;
   /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,  */
               /* rgba(14, 30, 37, 0.32) 0px -1px 5px 1px; */
   background-color: #fff;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   border: 1px solid #ccc;
 }
 
@@ -370,7 +370,7 @@ form#cats div div select:hover
   margin: 3px 0;
   padding: 5px;
   display: flex;
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc; */
 }
 
 .pagination li {
@@ -753,7 +753,7 @@ hero h1, .hero h3 {
 }
 
 p.backbutton:hover {
-  color: #444;
+  color: green;
   background: #fff;
 }
 p.backbutton {
@@ -763,7 +763,7 @@ p.backbutton {
   margin: 10px;
   border-radius: 5px;
   text-decoration: none;
-  background: #444;
+  background: green;
   color: #fff;
   font-size: medium;
 }
@@ -780,7 +780,10 @@ p.backbutton1 {
   color: #fff;
   text-decoration: none;
   font-size: 0.7em;
-
+  padding: 3px 7px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: green;
 }
 
 .listp{
@@ -931,6 +934,11 @@ select {
       flex-direction: column;
       text-align: end;
   }
+
+  .nav-bar .alphabet-list a {
+    margin: 10px !important;
+    padding: 5px !important;
+}
 
   .mainnav a {
     font-size: 1.3em;

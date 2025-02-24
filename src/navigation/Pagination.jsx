@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Pagination({ currentPage, itemsPerPage, changePage, totalItems }) {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -18,7 +18,13 @@ export default function Pagination({ currentPage, itemsPerPage, changePage, tota
           <React.Fragment key={pageNumber}>
             <li
               onClick={() => changePage(pageNumber)}
-              className={pageNumber === currentPage ? 'active' : ''}>
+              className={pageNumber === currentPage ? 'active' : ''}
+              style={{ 
+                backgroundColor: pageNumber === currentPage ? 'green' : 'white',
+                color: pageNumber === currentPage ? 'white' : 'black',
+                border: pageNumber === currentPage ? '1px solid green' : '1px solid black', 
+              }} 
+            >
               {pageNumber}
             </li>
             {(array[index + 1] - pageNumber > 1) && <li>...</li>}
@@ -26,5 +32,5 @@ export default function Pagination({ currentPage, itemsPerPage, changePage, tota
         ))}
       </ul>
     </div>
-  )
+  );
 }
